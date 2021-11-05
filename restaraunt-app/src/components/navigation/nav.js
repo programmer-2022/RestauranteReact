@@ -9,30 +9,31 @@ export default function Nav() {
                 <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul className="navbar-nav">
-                    <li className="nav-item">
+                <ul className="navbar-nav mx-auto">
+                    <li className="nav-item fs-5">
                         <a className="nav-link active" aria-current="page" href="#">Inicio</a>
                     </li>
-                    <li className="nav-item">
+                    <li className="nav-item fs-5">
                         <a className="nav-link" href="#">El Menú</a>
                     </li>
-                    <li className="nav-item">
+                    <li className="nav-item fs-5">
                         <a className="nav-link" href="#">Reservas</a>
                     </li>
-                    <li className="nav-item">
+                    <li className="nav-item fs-5">
                         <a className="nav-link" href="#">Contacto</a>
                     </li>
-                    <li className="nav-item">
+                    <li className="nav-item fs-5">
                         <a className="nav-link" href="#">Nosotros</a>
                     </li>
-                    <li className="nav-item dropdown">
+                    <li className="nav-item dropdown fs-5">
                         <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Iniciar sesión
                         </a>
                         <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a className="dropdown-item" href="#">Action</a></li>
-                            <li><a className="dropdown-item" href="#">Another action</a></li>
-                            <li><a className="dropdown-item" href="#">Something else here</a></li>
+                            <li><a className="dropdown-item" href="#">Perfil</a></li>
+                            <li><a className="dropdown-item" href="#">Órdenes de compra</a></li>
+                            <li><a className="dropdown-item" href="#">Carrito de compras</a></li>
+                            <li><a className="dropdown-item" href="#">Cerrar sesión</a></li>
                         </ul>
                     </li>
                 </ul>

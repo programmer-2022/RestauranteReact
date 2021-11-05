@@ -3,6 +3,9 @@ import Nav from '../navigation/nav'
 import Footer from '../footer/footer'
 import Carousel from '../carousel/carousel'
 import Propuesta from '../propuesta/propuesta'
+import Recomendados from '../recomendados/recomendados'
+import Evento from '../organizamos_evento/evento'
+import Testimonio from '../testimonios/testimonio'
 
 export default function App() {
   return (
@@ -10,6 +13,9 @@ export default function App() {
       <Nav />
       <Carousel/>
       <Propuesta />
+      <Recomendados />
+      <Evento />
+      <Testimonio />      
       <Footer />
     </>    
   );
