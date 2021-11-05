@@ -1,8 +1,14 @@
 import React from 'react'
+import {useHistory} from "react-router-dom"
+import Rutas from "../../routes/Rutas"
+
 
 export default function Nav() {
+
+    const his = useHistory();
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark opacity-85 p-3">
+    /*<nav className="navbar navbar-expand-lg navbar-dark bg-dark opacity-85 p-3">
         <div className="container-fluid">
             <a className="navbar-brand" href="#">Sal&Salsa</a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,7 +20,7 @@ export default function Nav() {
                         <a className="nav-link active" aria-current="page" href="#">Inicio</a>
                     </li>
                     <li className="nav-item fs-5">
-                        <a className="nav-link" href="#">El Menú</a>
+                        <a className="nav-link" href="/menu">El Menú</a>
                     </li>
                     <li className="nav-item fs-5">
                         <a className="nav-link" href="#">Reservas</a>
@@ -39,6 +45,13 @@ export default function Nav() {
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav>*/
+    <>
+    <button onClick={() => {
+        his.push("/")
+    }}>presionar</button>
+    
+    </>
   );
+  
 }
