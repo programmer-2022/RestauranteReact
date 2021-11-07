@@ -1,5 +1,4 @@
 import React from 'react'
-import '../testimonios/testimonio.css'
 
 export default function Testimonio() {
     return (
