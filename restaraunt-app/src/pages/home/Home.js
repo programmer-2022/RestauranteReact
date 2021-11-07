@@ -1,4 +1,3 @@
-import Footer from '../../components/footer/footer'
 import Carousel from '../../components/carousel/carousel'
 import Propuesta from '../../components/propuesta/propuesta'
 import Recomendados from '../../components/recomendados/recomendados'
@@ -9,13 +8,11 @@ import "normalize.css"
 export default function Home() {
   return (
     <>
-      
       <Carousel/>
       <Propuesta />
       <Recomendados />
       <Evento />
-      <Testimonio />      
-      <Footer />
+      <Testimonio />
     </>    
   );
 }
