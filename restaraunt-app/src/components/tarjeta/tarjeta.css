@@ -1,0 +1,34 @@
+.contenedorTarjeta {
+	background-color: red;
+	display: flex;
+	align-items:center;
+	justify-content: space-evenly;
+	margin-top: 20px;
+	margin-right: 10px;
+
+}
+
+.imagen {
+	background-color: blue;
+	width: 250px;
+	margin: 10px;
+}
+
+.contenedorCantidad {
+	background-color: blue;
+	min-width: 200px;
+	width: 250px;
+	margin: 10px;
+}
+
+.imagen img{
+	min-width:200px;
+	width: 100%;
+
+}
+
+.contenedorInfo {
+	background-color: pink;
+	min-width: 200px;
+	width: 70%;
+}
