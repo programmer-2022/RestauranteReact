@@ -4,14 +4,14 @@ import "./contacto.css"
 const Contacto = () => {
 	return (
 		<>
-			<div className="contenedor-titulo">
-        		<div className="div-titulo"><h1>Contáctanos</h1></div>
+			<div className="contenedor-titulo-contacto">
+        		<div className="div-titulo-contacto"><h1>Contáctanos</h1></div>
     		</div> 
 
 		    <div className="container-fluid">
 		        <div className="container">              
-		            <div className="row contenedor-parrafos">
-		                <div className="col div-izq">
+		            <div className="row contenedor-parrafos-contacto">
+		                <div className="col div-izq-contacto">
 		                    <p className="paragraph mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem repellat, cupiditate deleniti eveniet voluptate non praesentium numquam laudantium eaque quidem. Harum unde, sed iste assumenda minima eligendi eveniet quam corrupti.</p>
 		                    <p className="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem repellat, cupiditate deleniti eveniet voluptate non praesentium numquam laudantium eaque quidem. Harum unde, sed iste assumenda minima eligendi eveniet quam corrupti.</p>
 		                </div>
@@ -36,13 +36,13 @@ const Contacto = () => {
 		                        </div>
 
 		                        <div className="form-check mb-3">
-		                            <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
-		                            <label className="form-check-label fst-italic mb-2" for="flexCheckDefault">
+		                            <input className="form-check-input" type="checkbox" defaultValue="" id="flexCheckDefault"/>
+		                            <label className="form-check-label fst-italic mb-2" htmlFor="flexCheckDefault">
 		                            Acepto términos y condiciones
 		                            </label>
 		                        </div>
 		                        <div className="mb-3 text-center">
-		                            <button type="submit" className="btn mb-3">ENVIAR</button>
+		                            <button type="submit" className="btn boton-contacto mb-3">ENVIAR</button>
 		                        </div>
 		                    </form>
 		                </div>

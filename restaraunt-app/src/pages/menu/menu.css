@@ -1,24 +1,13 @@
-.tituloMenu {
-	margin-left: 200px;
-	margin-top: 150px;
-	margin-bottom: 60px;
+.contenedor-titulo-menu {
+    width: 90%;
+    margin: 0 auto;
+    padding: 100px 0px 50px 25px;
 }
-
-.tituloMenu h3 {
-	font-size: 70px;
+.div-titulo-menu {
+    font-weight: bold;
+    width: 35%;    
 }
-
-.contenedorMenu {
-	background-color: gray;
-	display: flex;
+.div-titulo-menu h1 {
+    color: #592F3D;
+    font-size: 5rem;
 }
-
-.contenedorTarjetasMenu {
-	background-color: white;
-	min-width: 700px;
-	max-width: 1500px;
-	width: 70%;
-	margin: auto;
-}
-
-

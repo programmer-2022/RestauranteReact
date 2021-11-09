@@ -1,4 +1,5 @@
 import React from 'react'
+import "normalize.css"
 import "./reservas.css"
 
 const Reservas = () => {
@@ -41,14 +42,14 @@ const Reservas = () => {
 		                            <input type="date" className="form-control" placeholder="Cantidad de personas" id="fecha" required/>
 		                        </div>
 
-		                        <div class="mb-4 my-select">
-		                            <select class="form-select" aria-label="Default select example">
-		                                <option selected>Seleccione el servicio</option>
+		                        <div className="mb-4 my-select">
+		                            <select className="form-select" aria-label="Default select example">
+		                                <option value="0">Seleccione el servicio</option>
 		                                <option value="1">Fiestas</option>
 		                                <option value="2">Cumpleaños</option>
 		                                <option value="3">Grado</option>
 		                            </select>
-		                            <span class="custom-arrow"></span>
+		                            <span className="custom-arrow"></span>
 		                        </div>
 
 		                        <div className="mb-4">
@@ -56,13 +57,13 @@ const Reservas = () => {
 		                        </div>
 
 		                        <div className="form-check mb-3">
-		                            <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+		                            <input className="form-check-input" type="checkbox" defaultValue="" id="flexCheckDefault"/>
 		                            <label className="form-check-label fst-italic mb-2" htmlFor="flexCheckDefault">
 		                            Acepto términos y condiciones
 		                            </label>
 		                        </div>
 		                        <div className="mb-3 text-center">
-		                            <button type="submit" className="btn mb-3">ENVIAR</button>
+		                            <button type="submit" className="btn boton mb-3">ENVIAR</button>
 		                        </div>
 		                    </form>
 		                </div>

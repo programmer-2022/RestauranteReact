@@ -11,9 +11,9 @@ const Rutas = () => {
     return (
         <Routes>
             <Route exact path="/" element={<Home/>} />
-            <Route exact path="/contacto" element={<Contacto/>} /> 
-            <Route exact path="/reservas" element={<Reservas/>} /> 
             <Route exact path="/menu" element={<Menu/>} /> 
+            <Route exact path="/reservas" element={<Reservas/>} /> 
+            <Route exact path="/contacto" element={<Contacto/>} /> 
             <Route exact path="/nosotros" element={<Nosotros/>} />
         </Routes>
     )

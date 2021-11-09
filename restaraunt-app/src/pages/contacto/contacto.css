@@ -1,21 +1,17 @@
-* {
-    padding: 0;
-    margin: 0;
-}
-.contenedor-titulo {
+.contenedor-titulo-contacto {
     width: 90%;
     margin: 0 auto;
     padding: 100px 0px 50px 25px;
 }
-.div-titulo {
+.div-titulo-contacto {
     font-weight: bold;
     width: 35%;    
 }
-.div-titulo h1 {
+.div-titulo-contacto h1 {
     color: #592F3D;
     font-size: 5rem;
 }
-.div-izq {
+.div-izq-contacto {
     margin-right: 15px;
 }
 .paragraph {
@@ -56,7 +52,7 @@
     border-right: var(--size) solid transparent;
     border-top: var(--size) solid #FBFBFB;
 }
-.btn {
+.boton-contacto {
     background-color: #FF3C04;
     color: #DFDED9;
     font-size: 1.2em;
@@ -66,7 +62,7 @@
 
 @media screen and (max-width: 1400px){
     
-    .div-titulo h1 {
+    .div-titulo-contacto h1 {
         font-size: 3.5rem;
     }  
 }
@@ -78,7 +74,7 @@
     .contenedor-parrafos {
         display: block;
     }
-    .div-titulo h1 {
+    .div-titulo-contacto h1 {
         font-size: 3rem;
     }
 }
@@ -87,7 +83,7 @@
 }
 
 @media screen and (max-width: 501px){
-    .div-titulo h1 {
+    .div-titulo-contacto h1 {
         font-size: 2.5rem;
     }
 }

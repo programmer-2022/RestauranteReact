@@ -1,4 +1,5 @@
 import React from 'react'
+import "normalize.css"
 
 export default function Nosotros() {
     return (
@@ -15,7 +16,6 @@ export default function Nosotros() {
 
             <div className="container p-1 position-relative">
                 
-                {/* Tarjeta para comentarios */}
                 <div className="card mb-3 border-0">
                     <div className="row g-0">
                         <div className="col-md-2 text-center">
@@ -81,7 +81,7 @@ export default function Nosotros() {
                                 <p className="card-text d-inline align-middle"><small className="text-muted">on Diciembre 12 2019 at 11:55 am</small></p>
                                 <p className="card-text mt-2">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                 <div className="position-absolute bottom-0 end-0">
-                                    <a href="#" class="btn btn-primary">Responder</a>
+                                    <a href="#" className="btn btn-primary">Responder</a>
                                 </div>
                             </div>                            
                         </div>                        
