@@ -3,7 +3,7 @@ import Tarjeta from "../../components/tarjeta/Tarjeta"
 import {useFetch} from "../../hooks/useFetch.js"
 import "./menu.css"
 
-const Menu = () => {
+const Menu = () => { 
 
 	/*
 
@@ -42,6 +42,42 @@ const Menu = () => {
 
   },[])
 
+const [productos, setProductos] = React.useState({})
+
+const agregar = (contador, id) => {
+
+	const producto = {
+		"IdProducto": id,
+		"cantidad": contador
+	}
+
+	if(productos.hasOwnProperty(producto.IdProducto)){
+		producto.cantidad = productos[producto.IdProducto].cantidad+contador
+	}
+	
+	productos[producto.IdProducto] = {...producto}
+	
+	
+
+
+/*
+	if(productos.hasOwnProperty(producto.IdProducto)){
+		producto.cantidad = productos[producto.IdProducto].cantidad+1
+	}
+*/
+
+	//setProductos((productos) => [...productos, producto])
+
+
+
+}
+
+
+console.log(productos)
+
+
+
+
 	return (
 		<>
 			<div className="tituloMenu">
@@ -50,7 +86,7 @@ const Menu = () => {
 			<div className="contenedorMenu">
 				<div className="contenedorTarjetasMenu">
 					{data.map(el => (
-						<Tarjeta key={el.id} titulo={el.title} descripcion={el.descripcion} img={el.url} precio={el.precio}/>	
+						<Tarjeta key={el.id} id={el.id} agregar={agregar} titulo={el.title} descripcion={el.descripcion} img={el.url} precio={el.precio}/>	
 							))}
 					
 				</div>
