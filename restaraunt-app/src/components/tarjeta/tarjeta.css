@@ -1,5 +1,5 @@
 .contenedorTarjeta {
-	background-color: red;
+	/*background-color: red;*/
 	display: flex;
 	align-items:center;
 	justify-content: space-evenly;
@@ -15,10 +15,23 @@
 }
 
 .contenedorCantidad {
-	background-color: blue;
-	min-width: 200px;
-	width: 250px;
+	/*background-color: blue;*/
+	min-width: 100px;
+	width: 150px;
 	margin: 10px;
+	display: flex;
+	align-items:center;
+	justify-content: center;
+	flex-direction:column;
+}
+
+.contenedorCantidad p {
+	font-size: 25px;
+}
+
+.contenedorCantidad button {
+	font-size: 20px;
+	margin-top: 20px;
 }
 
 .imagen img{
@@ -28,7 +41,20 @@
 }
 
 .contenedorInfo {
-	background-color: pink;
+	/*background-color: pink;*/
 	min-width: 200px;
 	width: 70%;
+}
+
+.contador {
+	/*background-color: black;*/
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 30px;
+	width: 120px;
+}
+
+.contador input {
+	width: 50px;
 }
