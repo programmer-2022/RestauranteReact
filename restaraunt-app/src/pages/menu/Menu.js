@@ -42,38 +42,21 @@ const Menu = () => {
 
   },[])
 
-const [productos, setProductos] = React.useState([])
-
-const [bandera, setBandera] = React.useState(false)
-
+const [productos, setProductos] = React.useState({})
 
 const agregar = (contador, id) => {
-
-	for (let p of productos) {
-		if(p.IdProducto == id) {
-			setBandera(true)
-		}
-	}
 
 	const producto = {
 		"IdProducto": id,
 		"cantidad": contador
 	}
 
-
-	
-
-	
-
-	console.log(bandera)
-
-	if (bandera == true) {
-
-	}else {
-		setProductos((productos) => [...productos, producto])
+	if(productos.hasOwnProperty(producto.IdProducto)){
+		producto.cantidad = productos[producto.IdProducto].cantidad+contador
 	}
 	
-
+	productos[producto.IdProducto] = {...producto}
+	
 	
 
 
