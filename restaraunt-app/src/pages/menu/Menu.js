@@ -1,8 +1,6 @@
 import {useState, useEffect, lazy, Suspense} from 'react'
-//import Tarjeta from "../../components/tarjeta/Tarjeta"
 import "normalize.css"
 import "./menu.css"
-// import {useFetch} from "../../hooks/useFetch.js"
 
 const CTarjeta = lazy(() => import('../../components/tarjeta/Tarjeta'))
 
@@ -37,6 +35,7 @@ export default function Menu() {
 			//producto.cantidad += contador
 			console.log("Ya existe asi que se suma cantidad")
 		}
+		//setProductos(productos[producto.IdProducto] = {...producto})
 		productos[producto.IdProducto] = {...producto}
 		console.log("Sobreescribiendo objeto")
 		console.log(productos)
