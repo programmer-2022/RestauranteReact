@@ -154,7 +154,7 @@ const Reservas = () => {
 									<label className="form-check-label fst-italic mb-2" htmlFor="flexCheckDefault">
 		                            Acepto términos y condiciones
 		                            </label>
-									{errors.fecha && <span className="text-danger ms-2">(*) <small>Campo obligatorio</small></span>}
+									{errors.terminos && <span className="text-danger ms-2">(*) <small>Campo obligatorio</small></span>}
 		                        </div>
 		                        <div className="mb-3 text-center">
 		                            <button type="submit" className="btn boton mb-3">ENVIAR</button>

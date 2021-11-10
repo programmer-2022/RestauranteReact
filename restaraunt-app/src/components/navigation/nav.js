@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom"
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faShoppingCart, faHome, faUtensils, faPhone, faUsers, faCalendarCheck, faSignInAlt } from '@fortawesome/free-solid-svg-icons'
 
 export default function Nav() {
 
@@ -12,23 +14,26 @@ export default function Nav() {
             </button>
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul className="navbar-nav mx-auto">
-                    <li className="nav-item fs-5">
-                        <Link to="/" className="nav-link active" aria-current="page">Inicio</Link>
+                    <li className="nav-item fs-5 me-3">
+                        <Link to="/" className="nav-link active" aria-current="page"><FontAwesomeIcon icon={faHome} /> Inicio</Link>
+                    </li>
+                    <li className="nav-item fs-5 me-3">
+                        <Link to="/menu" className="nav-link"><FontAwesomeIcon icon={faUtensils} /> El Menú</Link>
+                    </li>
+                    <li className="nav-item fs-5 me-3">
+                        <Link to="/reservas" className="nav-link"><FontAwesomeIcon icon={faCalendarCheck} /> Reservas</Link>
+                    </li>
+                    <li className="nav-item fs-5 me-3">
+                        <Link to="/contacto" className="nav-link"><FontAwesomeIcon icon={faPhone} /> Contacto</Link>
+                    </li>
+                    <li className="nav-item fs-5 me-3">
+                        <Link to="/nosotros" className="nav-link"><FontAwesomeIcon icon={faUsers} /> Nosotros</Link>
                     </li>
                     <li className="nav-item fs-5">
-                        <Link to="/menu" className="nav-link">El Menú</Link>
-                    </li>
-                    <li className="nav-item fs-5">
-                        <Link to="/reservas" className="nav-link">Reservas</Link>
-                    </li>
-                    <li className="nav-item fs-5">
-                        <Link to="/contacto" className="nav-link">Contacto</Link>
-                    </li>
-                    <li className="nav-item fs-5">
-                        <Link to="/nosotros" className="nav-link">Nosotros</Link>
-                    </li>
+                        <Link to="/carrito" className="nav-link"><FontAwesomeIcon icon={faShoppingCart} /> <span>Carrito vacío</span></Link>
+                    </li>                    
                     <li className="nav-item dropdown fs-5">
-                        <Link to="/nosotros" className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Iniciar sesión</Link>
+                        <Link to="/login" className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><FontAwesomeIcon icon={faSignInAlt} /> Iniciar sesión</Link>
                         <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><Link to="/perfil" className="dropdown-item">Perfil</Link></li>
                             <li><Link to="/detalle" className="dropdown-item">Órdenes de compra</Link></li>
@@ -37,7 +42,7 @@ export default function Nav() {
                         </ul>
                     </li>
                 </ul>
-            </div>
+            </div>            
         </div>
     </nav>
   );  
