@@ -157,7 +157,7 @@ const Reservas = () => {
 									{errors.terminos && <span className="text-danger ms-2">(*) <small>Campo obligatorio</small></span>}
 		                        </div>
 		                        <div className="mb-3 text-center">
-		                            <button type="submit" className="btn boton mb-3">ENVIAR</button>
+		                            <button type="submit" className="btn boton mb-3">Enviar Solicitud</button>
 		                        </div>
 		                    </form>
 		                </div>
