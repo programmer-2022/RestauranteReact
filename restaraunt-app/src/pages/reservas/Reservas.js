@@ -1,8 +1,52 @@
-import React from 'react'
+import {useEffect, useState} from 'react'
 import "normalize.css"
 import "./reservas.css"
+import Swal from 'sweetalert2'
+import {useForm} from 'react-hook-form'
 
 const Reservas = () => {
+
+	const [data, setData] = useState([])
+	const {register, handleSubmit, formState: {errors}} = useForm() 
+
+	const getDataSelect = async () => {
+		try {
+			const url = 'data/reservas.json'
+			const res = await fetch(url)
+			const _data = await res.json()
+			if(res.ok) setData(_data)	
+		} catch (error) {
+			console.log(error);
+		}
+	}
+	
+	useEffect(() => {
+		getDataSelect()
+	},[])
+	
+	const onHandleSubmit = (body, e) => {
+		if(body !== null) {
+			Swal.fire({
+				title: body.nombre,
+				text: "¿Está seguro de hacer la reservación?",
+				icon: 'warning',
+				showCancelButton: true,
+				confirmButtonColor: '#3085d6',
+				cancelButtonColor: '#d33',
+				confirmButtonText: 'Reservar',
+				cancelButtonText: 'Cancelar'
+			  }).then((result) => {
+				if (result.isConfirmed) {
+				  Swal.fire(
+					'Gracias por tu solicitud',
+					'Hemos recibido tu solicitud exitosamente, te haremos llegar un correo de confirmación',
+					'success'
+				  )
+				}
+			  })
+		}
+	}
+
 	return (
 		<>
 			<div className="contenedor-titulo">
@@ -17,50 +61,100 @@ const Reservas = () => {
 		                    <p className="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem repellat, cupiditate deleniti eveniet voluptate non praesentium numquam laudantium eaque quidem. Harum unde, sed iste assumenda minima eligendi eveniet quam corrupti.</p>
 		                </div>
 		                <div className="col">
-		                    <form>
-		                        	                        
+		                    <form onSubmit={handleSubmit(onHandleSubmit)}>		                        	                        
 		                        <div className="mb-4">
-		                            <input type="text" className="form-control" placeholder="Nombre completo"/>
+		                            <input 
+										type="text" 
+										className="form-control" 
+										placeholder="Nombre completo" 
+										autoComplete="off" 
+										{...register("nombre", {required: true})}
+									/>
+									{errors.nombre && <span className="text-danger">(*) <small>Campo obligatorio</small></span>}
 		                        </div>
 
 		                        <div className="mb-4">
-		                            <input type="text" className="form-control" placeholder="Número de contacto"/>
+		                            <input 
+										type="text" 
+										className="form-control" 
+										placeholder="Número de contacto" 
+										autoComplete="off"
+										{...register("telefono", {required: true})}
+									/>
+									{errors.telefono && <span className="text-danger">(*) <small>Campo obligatorio</small></span>}
 		                        </div>
 
-
 		                        <div className="mb-4">
-		                            <input type="email" className="form-control" placeholder="Correo Electrónico" required/>
+		                            <input 
+										type="email" 
+										className="form-control" 
+										placeholder="Correo Electrónico" 
+										autoComplete="off" 
+										{...register("correo", {required: true})}
+									/>
+									{errors.correo && <span className="text-danger">(*) <small>Campo obligatorio</small></span>}
 		                        </div>
 
 		                        <div className="mb-4">
 		                            <label htmlFor="cantidad">Cantidad de personas</label>
-		                            <input type="number" className="form-control" placeholder="Cantidad de personas" id="cantidad" required/>
+		                            <input 
+										type="number" 
+										className="form-control" 
+										placeholder="Cantidad de personas" 
+										autoComplete="off"
+										min="1"
+										max="99"
+										{...register("cantidad", {required: true})}
+									/>
 		                        </div>
 
 		                        <div className="mb-4">
 		                            <label htmlFor="fecha">Fecha de la reserva</label>
-		                            <input type="date" className="form-control" placeholder="Cantidad de personas" id="fecha" required/>
+		                            <input 
+										type="date" 
+										className="form-control" 
+										placeholder="Cantidad de personas" 
+										{...register("fecha", {required: true})}
+									/>
+									{errors.fecha && <span className="text-danger">(*) <small>Campo obligatorio</small></span>}
 		                        </div>
 
 		                        <div className="mb-4 my-select">
-		                            <select className="form-select" aria-label="Default select example">
-		                                <option value="0">Seleccione el servicio</option>
-		                                <option value="1">Fiestas</option>
-		                                <option value="2">Cumpleaños</option>
-		                                <option value="3">Grado</option>
+									<select 
+										className="form-select" 
+										aria-label="Default select example"
+										{...register("servicios", {required: true})}>
+		                                {
+											(data.length !== 0)
+											? (data.map((item) => { return <option key={item.id} value={item.id}>{item.name}</option>}))
+											: (<option value="0">-No existen items-</option>)
+										}
 		                            </select>
 		                            <span className="custom-arrow"></span>
+									{errors.servicios && <span>Campo obligatorio</span>}
 		                        </div>
 
 		                        <div className="mb-4">
-		                            <textarea className="form-control my-textarea" rows="4" placeholder="Su Mensaje"></textarea>
+		                            <textarea 
+										className="form-control my-textarea" 
+										rows="4" 
+										placeholder="Su Mensaje" 
+										{...register("mensaje", {required: true})}>
+									</textarea>
+									{errors.mensaje && <span className="text-danger">(*) <small>Campo obligatorio</small></span>}
 		                        </div>
 
 		                        <div className="form-check mb-3">
-		                            <input className="form-check-input" type="checkbox" defaultValue="" id="flexCheckDefault"/>
-		                            <label className="form-check-label fst-italic mb-2" htmlFor="flexCheckDefault">
+		                            <input 
+										className="form-check-input" 
+										type="checkbox" 
+										id="flexCheckDefault" 
+										{...register("terminos", {required: true})}
+									/>
+									<label className="form-check-label fst-italic mb-2" htmlFor="flexCheckDefault">
 		                            Acepto términos y condiciones
 		                            </label>
+									{errors.fecha && <span className="text-danger ms-2">(*) <small>Campo obligatorio</small></span>}
 		                        </div>
 		                        <div className="mb-3 text-center">
 		                            <button type="submit" className="btn boton mb-3">ENVIAR</button>
@@ -69,8 +163,7 @@ const Reservas = () => {
 		                </div>
 		            </div>   
 		        </div>
-		    </div>
-          
+		    </div>          
 		</>
 	)
 }
