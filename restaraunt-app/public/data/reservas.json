@@ -1,5 +1,9 @@
 [
     {
+        "id" : 0,
+        "name": "-Seleccione-"
+    },
+    {
         "id" : 1,
         "name": "Celebración de cumpleaños"
     },
