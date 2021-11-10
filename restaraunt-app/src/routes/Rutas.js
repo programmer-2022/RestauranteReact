@@ -6,6 +6,7 @@ import Contacto from "../pages/contacto/Contacto"
 import Reservas from "../pages/reservas/Reservas"
 import Menu from "../pages/menu/Menu"
 import Nosotros from "../pages/nosotros/Nosotros"
+import Login from "../pages/login/Login.js"
 
 const Rutas = () => {
     return (
@@ -15,6 +16,7 @@ const Rutas = () => {
             <Route exact path="/reservas" element={<Reservas/>} /> 
             <Route exact path="/contacto" element={<Contacto/>} /> 
             <Route exact path="/nosotros" element={<Nosotros/>} />
+            <Route exact path="/login" element={<Login/>} />
         </Routes>
     )
 }
