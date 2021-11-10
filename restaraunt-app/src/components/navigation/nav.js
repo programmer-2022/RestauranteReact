@@ -30,7 +30,7 @@ export default function Nav() {
                     <li className="nav-item dropdown fs-5">
                         <Link to="/nosotros" className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cuenta</Link>
                         <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><Link to="/perfil" className="dropdown-item">Iniciar sesión</Link></li>
+                            <li><Link to="/login" className="dropdown-item">Iniciar sesión</Link></li>
                             <li><Link to="/perfil" className="dropdown-item">Perfil</Link></li>
                             <li><Link to="/detalle" className="dropdown-item">Órdenes de compra</Link></li>
                             <li><Link to="/carrito" className="dropdown-item">Carrito de compras</Link></li>

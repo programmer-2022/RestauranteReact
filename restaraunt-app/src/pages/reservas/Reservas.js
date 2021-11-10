@@ -1,8 +1,31 @@
 import React from 'react'
 import "normalize.css"
 import "./reservas.css"
+//import {useFetch} from "../../hooks/useFetch"
 
 const Reservas = () => {
+
+	
+
+	const url = "data/reservas.json"
+
+	const [data, setData] = React.useState([]);
+	
+	const getData = async () => {
+		try {
+			const res = await fetch(url)
+			const _data = await res.json()
+			if(res.ok) setData(_data)			
+		} catch (error) {
+			console.log(error);
+		}
+	}
+	
+	React.useEffect(() => {
+		getData()
+	},[])
+
+
 	return (
 		<>
 			<div className="contenedor-titulo">
@@ -20,7 +43,7 @@ const Reservas = () => {
 		                    <form>
 		                        	                        
 		                        <div className="mb-4">
-		                            <input type="text" className="form-control" placeholder="Nombre completo"/>
+		                            <input type="text" className="form-control" placeholder="Nombre completo" required/>
 		                        </div>
 
 		                        <div className="mb-4">
@@ -44,10 +67,9 @@ const Reservas = () => {
 
 		                        <div className="mb-4 my-select">
 		                            <select className="form-select" aria-label="Default select example">
-		                                <option value="0">Seleccione el servicio</option>
-		                                <option value="1">Fiestas</option>
-		                                <option value="2">Cumpleaños</option>
-		                                <option value="3">Grado</option>
+		                                {
+		                                (data.length !== 0) ? data.map((obj) => {return <option key={obj.id} value={obj.id}>{obj.name}</option>}) : <option value="0">Items not found</option>
+						              }
 		                            </select>
 		                            <span className="custom-arrow"></span>
 		                        </div>
