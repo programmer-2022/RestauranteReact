@@ -91,7 +91,7 @@ const Contacto = () => {
 		                        </div>
 								
 		                        <div className="mb-4 text-center">
-		                            <button type="submit" className="btn boton-contacto mb-3">ENVIAR</button>
+		                            <button type="submit" className="btn boton-contacto mb-3">Enviar Solicitud</button>
 		                        </div>
 		                    </form>
 		                </div>
