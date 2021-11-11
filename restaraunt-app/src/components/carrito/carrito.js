@@ -10,7 +10,7 @@ export default function Carrito() {
             (items.length === 0)
                 ? (<span>Carrito Vacío</span>)
                 : (<span>10</span>)
-        } 
+        }
         </>       
     )
 }

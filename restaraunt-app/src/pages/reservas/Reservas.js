@@ -1,13 +1,28 @@
-import {useEffect, useState} from 'react'
+import {useEffect, useState, useRef} from 'react'
 import "normalize.css"
 import "./reservas.css"
 import Swal from 'sweetalert2'
 import {useForm} from 'react-hook-form'
+import emailjs from 'emailjs-com'
+import {useAuth0} from '@auth0/auth0-react'
 
 const Reservas = () => {
-
+	
+	const form = useRef();
 	const [data, setData] = useState([])
-	const {register, handleSubmit, formState: {errors}} = useForm() 
+	const {register, handleSubmit, formState: {errors}} = useForm()
+	const {isAuthenticated, loginWithRedirect} = useAuth0()
+
+	const sendEmail = () => {
+		//e.preventDefault();
+	
+		emailjs.sendForm('service_dzw0goj', 'template_cbw4r9b', form.current, 'user_x8z2mxojwDrBNMGJyIrnV')
+			.then((result) => {
+				console.log(result.text);
+			}, (error) => {
+				console.log(error.text);
+			});
+	};
 
 	const getDataSelect = async () => {
 		try {
@@ -42,6 +57,7 @@ const Reservas = () => {
 					'Hemos recibido tu solicitud exitosamente, te haremos llegar un correo de confirmación',
 					'success'
 				  )
+				  sendEmail()
 				}
 			  })
 		}
@@ -49,6 +65,9 @@ const Reservas = () => {
 
 	return (
 		<>
+			{
+				(isAuthenticated) ?  (
+			<>
 			<div className="contenedor-titulo">
         		<div className="div-titulo"><h1>Reservas</h1></div>
     		</div> 
@@ -61,7 +80,7 @@ const Reservas = () => {
 		                    <p className="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem repellat, cupiditate deleniti eveniet voluptate non praesentium numquam laudantium eaque quidem. Harum unde, sed iste assumenda minima eligendi eveniet quam corrupti.</p>
 		                </div>
 		                <div className="col">
-		                    <form onSubmit={handleSubmit(onHandleSubmit)}>		                        	                        
+		                    <form ref={form} onSubmit={handleSubmit(onHandleSubmit)}>		                        	                        
 		                        <div className="mb-4">
 		                            <input 
 										type="text" 
@@ -163,7 +182,9 @@ const Reservas = () => {
 		                </div>
 		            </div>   
 		        </div>
-		    </div>          
+		    </div>  
+			</> )
+			: (loginWithRedirect()) }        
 		</>
 	)
 }
