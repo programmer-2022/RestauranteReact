@@ -3,11 +3,13 @@ import "normalize.css"
 import "./reservas.css"
 import Swal from 'sweetalert2'
 import {useForm} from 'react-hook-form'
+import {useAuth0} from '@auth0/auth0-react'
 
 const Reservas = () => {
 
 	const [data, setData] = useState([])
 	const {register, handleSubmit, formState: {errors}} = useForm() 
+	const { isAuthenticated, loginWithRedirect} = useAuth0()
 
 	const getDataSelect = async () => {
 		try {
@@ -26,7 +28,9 @@ const Reservas = () => {
 	
 	const onHandleSubmit = (body, e) => {
 		if(body !== null) {
-			Swal.fire({
+
+			if (isAuthenticated) {
+				Swal.fire({
 				title: body.nombre,
 				text: "¿Está seguro de hacer la reservación?",
 				icon: 'warning',
@@ -44,10 +48,18 @@ const Reservas = () => {
 				  )
 				}
 			  })
+			}
+            else {
+            	console.log("no pudo iniciar")
+            }
+
 		}
 	}
 
 	return (
+		<>
+		{
+			(isAuthenticated) ? (
 		<>
 			<div className="contenedor-titulo">
         		<div className="div-titulo"><h1>Reservas</h1></div>
@@ -163,7 +175,11 @@ const Reservas = () => {
 		                </div>
 		            </div>   
 		        </div>
-		    </div>          
+		    </div>
+		    </>
+		    ) : (loginWithRedirect())
+			
+		}          
 		</>
 	)
 }

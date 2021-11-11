@@ -10,7 +10,29 @@ import {useAuth0} from '@auth0/auth0-react'
 
 export default function Nav() {
 
-    const { isAuthenticated } = useAuth0()
+
+    const { isAuthenticated} = useAuth0()
+    /*
+    const { isAuthenticated, loginWithRedirect} = useAuth0()
+
+    const [dir, setDir] = React.useState("")
+
+    const direccion = () => {
+        
+        if (isAuthenticated){
+            loginWithRedirect()
+        } else {
+          
+          setDir("/reservas")
+        }
+
+}
+
+    React.useEffect(() => {
+        direccion()
+    }, [])
+
+    */
 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark opacity-85 p-3">
@@ -28,7 +50,8 @@ export default function Nav() {
                             <Link to="/menu" className="nav-link"><FontAwesomeIcon icon={faUtensils} /> El Menú</Link>
                         </li>
                         <li className="nav-item fs-5 me-3">
-                            <Link to="/reservas" className="nav-link"><FontAwesomeIcon icon={faCalendarCheck} /> Reservas</Link>
+                        <Link to="/reservas" className="nav-link"><FontAwesomeIcon icon={faCalendarCheck} /> Reservas</Link>
+
                         </li>
                         <li className="nav-item fs-5 me-3">
                             <Link to="/contacto" className="nav-link"><FontAwesomeIcon icon={faPhone} /> Contacto</Link>
