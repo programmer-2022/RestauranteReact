@@ -41,7 +41,9 @@ const Reservas = () => {
 	
 	const onHandleSubmit = (body, e) => {
 		if(body !== null) {
-			Swal.fire({
+
+			if (isAuthenticated) {
+				Swal.fire({
 				title: body.nombre,
 				text: "¿Está seguro de hacer la reservación?",
 				icon: 'warning',
@@ -60,6 +62,11 @@ const Reservas = () => {
 				  sendEmail()
 				}
 			  })
+			}
+            else {
+            	console.log("no pudo iniciar")
+            }
+
 		}
 	}
 
@@ -182,9 +189,11 @@ const Reservas = () => {
 		                </div>
 		            </div>   
 		        </div>
-		    </div>  
-			</> )
-			: (loginWithRedirect()) }        
+		    </div>
+		    </>
+		    ) : (loginWithRedirect())
+			
+		}          
 		</>
 	)
 }
