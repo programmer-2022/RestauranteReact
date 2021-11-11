@@ -1,5 +1,6 @@
 import React from 'react'
 import '../footer/footer.css'
+import {Link} from 'react-router-dom'
 
 export default function Footer() {
   return (
@@ -13,11 +14,11 @@ export default function Footer() {
                 <div className="col-2">
                     <h5>MAPA DEL SITIO</h5>
                     <ul className="nav flex-column">
-                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Restaurante Sal & Salsa Ltda</a></li>
-                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Call 19 No. 7-30 Bogotá</a></li>
-                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">reservas@salysalsa.com</a></li>
-                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">312 325 25 32</a></li>
-                        <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">&copy;Copyright</a></li>
+                        <li className="nav-item mb-2"><Link to="/" className="nav-link p-0 text-muted">Restaurante Sal & Salsa Ltda</Link></li>
+                        <li className="nav-item mb-2"><Link to="/" className="nav-link p-0 text-muted">Call 19 No. 7-30 Bogotá</Link></li>
+                        <li className="nav-item mb-2"><Link to="/" className="nav-link p-0 text-muted">reservas@salysalsa.com</Link></li>
+                        <li className="nav-item mb-2"><Link to="/" className="nav-link p-0 text-muted">312 325 25 32</Link></li>
+                        <li className="nav-item mb-2"><Link to="/" className="nav-link p-0 text-muted">&copy;Copyright</Link></li>
                     </ul>
                 </div>
 

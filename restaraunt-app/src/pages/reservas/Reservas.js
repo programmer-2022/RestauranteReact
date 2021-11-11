@@ -41,7 +41,6 @@ const Reservas = () => {
 	
 	const onHandleSubmit = (body, e) => {
 		if(body !== null) {
-
 			if (isAuthenticated) {
 				Swal.fire({
 				title: body.nombre,
@@ -62,11 +61,7 @@ const Reservas = () => {
 				  sendEmail()
 				}
 			  })
-			}
-            else {
-            	console.log("no pudo iniciar")
-            }
-
+			}            
 		}
 	}
 

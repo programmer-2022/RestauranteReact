@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import "normalize.css"
 
 export default function Nosotros() {
@@ -27,7 +28,7 @@ export default function Nosotros() {
                                 <p className="card-text d-inline align-middle"><small className="text-muted">on Diciembre 12 2019 at 11:55 am</small></p>
                                 <p className="card-text mt-2">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                 <div className="position-absolute bottom-0 end-0">
-                                    <a href="#" class="btn btn-primary">Responder</a>
+                                    <Link to="/" className="btn btn-primary">Responder</Link>
                                 </div>
                             </div>                            
                         </div>                        
@@ -45,7 +46,7 @@ export default function Nosotros() {
                                 <p className="card-text d-inline align-middle"><small className="text-muted">on Diciembre 12 2019 at 11:55 am</small></p>
                                 <p className="card-text mt-2">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                 <div className="position-absolute bottom-0 end-0">
-                                    <a href="#" class="btn btn-primary">Responder</a>
+                                    <Link to="/" className="btn btn-primary">Responder</Link>
                                 </div>
                             </div>                            
                         </div>                        
@@ -63,7 +64,7 @@ export default function Nosotros() {
                                 <p className="card-text d-inline align-middle"><small className="text-muted">on Diciembre 12 2019 at 11:55 am</small></p>
                                 <p className="card-text mt-2">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                 <div className="position-absolute bottom-0 end-0">
-                                    <a href="#" class="btn btn-primary">Responder</a>
+                                    <Link to="/" className="btn btn-primary">Responder</Link>
                                 </div>
                             </div>                            
                         </div>                        
@@ -81,7 +82,7 @@ export default function Nosotros() {
                                 <p className="card-text d-inline align-middle"><small className="text-muted">on Diciembre 12 2019 at 11:55 am</small></p>
                                 <p className="card-text mt-2">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                 <div className="position-absolute bottom-0 end-0">
-                                    <a href="#" className="btn btn-primary">Responder</a>
+                                    <Link to="/" className="btn btn-primary">Responder</Link>
                                 </div>
                             </div>                            
                         </div>                        
@@ -98,7 +99,7 @@ export default function Nosotros() {
                     <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escribe tu Comentario"></textarea>
                 </div>
                 <div className="container text-end p-0">
-                    <a href="#" className="btn btn-primary">Comentar</a>
+                    <Link to="/" className="btn btn-primary">Comentar</Link>
                 </div>
             </div>
 
