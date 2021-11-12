@@ -6,7 +6,7 @@ import Contacto from "../pages/contacto/Contacto"
 import Reservas from "../pages/reservas/Reservas"
 import Menu from "../pages/menu/Menu"
 import Nosotros from "../pages/nosotros/Nosotros"
-import Login from "../pages/login/Login.js"
+import Dashboard from "../pages/dashboard/dashboard.js"
 import Carrito from "../components/carrito/carrito"
 
 const Rutas = () => {
@@ -17,7 +17,7 @@ const Rutas = () => {
             <Route exact path="/reservas" element={<Reservas/>} /> 
             <Route exact path="/contacto" element={<Contacto/>} /> 
             <Route exact path="/nosotros" element={<Nosotros/>} />
-            <Route exact path="/login" element={<Login/>} />
+            <Route exact path="/dashboard" element={<Dashboard/>} />
             <Route exact path="/carrito" element={<Carrito />} />
         </Routes>
     )
