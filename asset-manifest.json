@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/RestauranteReact/static/css/main.4cf1d275.chunk.css",
-    "main.js": "/RestauranteReact/static/js/main.31f42955.chunk.js",
-    "main.js.map": "/RestauranteReact/static/js/main.31f42955.chunk.js.map",
+    "main.js": "/RestauranteReact/static/js/main.258b56a0.chunk.js",
+    "main.js.map": "/RestauranteReact/static/js/main.258b56a0.chunk.js.map",
     "runtime-main.js": "/RestauranteReact/static/js/runtime-main.2f1a405c.js",
     "runtime-main.js.map": "/RestauranteReact/static/js/runtime-main.2f1a405c.js.map",
     "static/css/2.02ce77d2.chunk.css": "/RestauranteReact/static/css/2.02ce77d2.chunk.css",
@@ -19,6 +19,6 @@
     "static/css/2.02ce77d2.chunk.css",
     "static/js/2.e1b810fa.chunk.js",
     "static/css/main.4cf1d275.chunk.css",
-    "static/js/main.31f42955.chunk.js"
+    "static/js/main.258b56a0.chunk.js"
   ]
 }
