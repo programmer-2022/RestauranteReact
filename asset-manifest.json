@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/RestauranteReact/tree/main/restaraunt-app/static/css/main.4cf1d275.chunk.css",
+    "main.js": "/RestauranteReact/tree/main/restaraunt-app/static/js/main.31f42955.chunk.js",
+    "main.js.map": "/RestauranteReact/tree/main/restaraunt-app/static/js/main.31f42955.chunk.js.map",
+    "runtime-main.js": "/RestauranteReact/tree/main/restaraunt-app/static/js/runtime-main.bcd87e92.js",
+    "runtime-main.js.map": "/RestauranteReact/tree/main/restaraunt-app/static/js/runtime-main.bcd87e92.js.map",
+    "static/css/2.02ce77d2.chunk.css": "/RestauranteReact/tree/main/restaraunt-app/static/css/2.02ce77d2.chunk.css",
+    "static/js/2.e1b810fa.chunk.js": "/RestauranteReact/tree/main/restaraunt-app/static/js/2.e1b810fa.chunk.js",
+    "static/js/2.e1b810fa.chunk.js.map": "/RestauranteReact/tree/main/restaraunt-app/static/js/2.e1b810fa.chunk.js.map",
+    "index.html": "/RestauranteReact/tree/main/restaraunt-app/index.html",
+    "static/css/2.02ce77d2.chunk.css.map": "/RestauranteReact/tree/main/restaraunt-app/static/css/2.02ce77d2.chunk.css.map",
+    "static/css/main.4cf1d275.chunk.css.map": "/RestauranteReact/tree/main/restaraunt-app/static/css/main.4cf1d275.chunk.css.map",
+    "static/js/2.e1b810fa.chunk.js.LICENSE.txt": "/RestauranteReact/tree/main/restaraunt-app/static/js/2.e1b810fa.chunk.js.LICENSE.txt",
+    "static/media/avatar.1a84bdf0.svg": "/RestauranteReact/tree/main/restaraunt-app/static/media/avatar.1a84bdf0.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bcd87e92.js",
+    "static/css/2.02ce77d2.chunk.css",
+    "static/js/2.e1b810fa.chunk.js",
+    "static/css/main.4cf1d275.chunk.css",
+    "static/js/main.31f42955.chunk.js"
+  ]
+}
