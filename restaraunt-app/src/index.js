@@ -8,11 +8,14 @@ import Body from "./components/body/body"
 import {BrowserRouter as Router} from "react-router-dom"
 import {Auth0Provider} from '@auth0/auth0-react'
 
+const _domain = process.env.REACT_APP_AUTH0_DOMAIN
+const _clientID = process.env.REACT_APP_AUTH0_CLIENT_ID
+
 ReactDOM.render(
   <React.StrictMode>
     <Auth0Provider
-      domain="dev-vzw0o8x0.us.auth0.com"
-      clientId="P2fD4DjwE6QfEZAubwrsvmQ1mMAKXvsb"
+      domain={_domain}
+      clientId={_clientID}
       redirectUri={window.location.origin}>
       <Router>
         <Nav />

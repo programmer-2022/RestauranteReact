@@ -8,7 +8,7 @@ export default function Footer() {
         <footer className="py-5">
             <div className="row">
                 <div className="col-2 mx-5 footer-container">
-                    <img src="/assets/logo@2x.png" alt="" className="w-75" />
+                    <img src="images//logo@2x.png" alt="" className="w-75" />
                 </div>
 
                 <div className="col-2">
@@ -31,7 +31,7 @@ export default function Footer() {
                 </div>
 
                 <div className="col-2">
-                    <img src="/assets/mapa.png" alt="" className="w-150" />
+                    <img src="images/mapa.png" alt="" className="w-150" />
                 </div>
               
             </div>            
