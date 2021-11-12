@@ -1,4 +1,4 @@
-import {useState, useEffect, lazy, Suspense} from 'react'
+import {useState, useEffect}  from 'react'
 import {Link} from 'react-router-dom'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faDownload} from '@fortawesome/free-solid-svg-icons'
@@ -35,27 +35,14 @@ export default function Menu() {
 		getData()
 	},[])
 
-	const agregar = (pCantidad, id) => {
-		setTotal(pCantidad)
-		const producto = {
-			"IdProducto": id,
-			"cantidad": pCantidad
-		}
-		if(productos.hasOwnProperty(producto.IdProducto)) {
-			producto.cantidad = pCantidad
-		}
-		//setProductos(productos[producto.IdProducto] = {...producto})
-		productos[producto.IdProducto] = {...producto}
+	const agregar = (producto) => {
+		productos[producto.id] = {...producto}
 		MsgSucessful("Producto añadido a la cesta")
-
-		//setTotal((total) => total += pCantidad)
-		//console.log("Total productos: ", total);
 		localStorage.setItem('carrito', JSON.stringify(productos));
 	}
 	
-	console.log(productos)
 	return (
-		<Suspense fallback={<h2>Cargando...</h2>}>
+		<>
  			<div className="contenedor-titulo-menu">
         		<div className="div-titulo-menu"><h1>El Menú</h1></div>
 				<div className="boton-descargar-menu mb-5">
@@ -67,10 +54,10 @@ export default function Menu() {
 					{
 						(data.length === 0)
 						? <h2>Cargando productos...</h2>
-						: data.map(el => (<Tarjeta key={el.id} id={el.id} agregar={agregar} titulo={el.title} descripcion={el.descripcion} img={el.url} precio={el.precio}/> ))
+						: data.map(el => (<Tarjeta key={el.id} id={el.id} agregar={agregar} nombre={el.nombre} descripcion={el.descripcion} img={el.url} precio={el.precio}/> ))
 					}					
 				</div>				
 			</div>
-		</Suspense>		
+		</>		
 	)
 }

@@ -2,38 +2,14 @@ import React from 'react'
 import { Link } from "react-router-dom"
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faShoppingCart, faHome, faUtensils, faPhone, faUsers, faCalendarCheck } from '@fortawesome/free-solid-svg-icons'
-import Carrito from '../carrito/carrito'
 import LoginButton from '../authorization/login'
 import Profile from '../profile/profile'
 import {useAuth0} from '@auth0/auth0-react'
 
-
 export default function Nav() {
 
-
     const { isAuthenticated} = useAuth0()
-    /*
-    const { isAuthenticated, loginWithRedirect} = useAuth0()
-
-    const [dir, setDir] = React.useState("")
-
-    const direccion = () => {
-        
-        if (isAuthenticated){
-            loginWithRedirect()
-        } else {
-          
-          setDir("/reservas")
-        }
-
-}
-
-    React.useEffect(() => {
-        direccion()
-    }, [])
-
-    */
-
+    
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark opacity-85 p-3">
             <div className="container-fluid">
@@ -60,7 +36,7 @@ export default function Nav() {
                             <Link to="/nosotros" className="nav-link"><FontAwesomeIcon icon={faUsers} /> Nosotros</Link>
                         </li>
                         <li className="nav-item fs-5">
-                            <Link to="/carrito" className="nav-link"><FontAwesomeIcon icon={faShoppingCart} /> <Carrito /></Link>
+                            <Link to="/carrito" className="nav-link"><FontAwesomeIcon icon={faShoppingCart} /> 0 items</Link>
                         </li>
                     </ul>
                     {              
