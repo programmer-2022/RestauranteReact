@@ -59,6 +59,13 @@ export default function Nav() {
                         <li className="nav-item fs-5 me-3">
                             <Link to="/nosotros" className="nav-link"><FontAwesomeIcon icon={faUsers} /> Nosotros</Link>
                         </li>
+                        {
+                            (isAuthenticated) ?
+                                <li className="nav-item fs-5 me-3">
+                                    <Link to="/dashboard" className="nav-link"><FontAwesomeIcon icon={faUsers} />Dashboard</Link>
+                                </li>
+                            : ""
+                        }
                         <li className="nav-item fs-5">
                             <Link to="/carrito" className="nav-link"><FontAwesomeIcon icon={faShoppingCart} /> <Carrito /></Link>
                         </li>
